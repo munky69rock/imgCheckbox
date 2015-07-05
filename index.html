@@ -1,158 +1,184 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>imgCheckbox | a jQuery plugin that makes img tags checkable</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-	</head>
-	<body id="top">
+<head>
+	<title>imgCheckbox | a jQuery plugin that makes img tags checkable</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+</head>
+<body id="top">
 
-		<!-- Header -->
-			<header id="header">
-				<div class="content">
-					<h1><a href="#"><span class="lowlight">jquery.</span>imgCheckbox<span class="lowlight">.js</span></a></h1>
-					<p class="subtitle">Toggle the internet</p>
-					<p>A jQuery plugin that makes <code>img</code> tags checkable.<br />
-					Find it on <a href="https://github.com/jcuenod/imgCheckbox/">github</a>. Try it by clicking here →</p>
-					<ul class="actions">
-						<li><a href="https://github.com/jcuenod/imgCheckbox/" class="button special icon fa-download">Download</a></li>
-						<li><a href="#basicusage" class="button icon fa-chevron-down scrolly">Learn More</a></li>
-					</ul>
-				</div>
-				<div class="image"><img src="images/redumbrella.jpg" /></div>
-			</header>
+	<!-- Header -->
+	<header id="header">
+		<div class="content">
+			<h1><a href="#"><span class="lowlight">jquery.</span>imgCheckbox<span class="lowlight">.js</span></a></h1>
+			<p class="subtitle">Toggle the internet</p>
+			<p>A jQuery plugin that makes <code>img</code> tags checkable.<br />
+				Find it on <a href="https://github.com/jcuenod/imgCheckbox/">github</a>. Try it by clicking here →</p>
+				<ul class="actions">
+					<li><a href="https://github.com/jcuenod/imgCheckbox/" class="button special icon fa-download">Download</a></li>
+					<li><a href="#basicusage" class="button icon fa-chevron-down scrolly">Learn More</a></li>
+				</ul>
+			</div>
+			<div class="image"><img src="images/redumbrella.jpg" /></div>
+		</header>
 
 		<!-- One -->
-			<section id="basicusage" class="wrapper special">
-				<header class="major">
-					<h2>Basic Usage</h2>
-				</header>
-				<p>You can call <b>imgCheckbox</b> without any parameters on any jQuery collection containing <code>img</code> elements.</p>
-				<p><code>$("img").imgCheckbox();</code></p>
-					<form class="exampleone">
-						<p>
-							<img src="images/image1.jpg" alt="">
-							<span class="spacer"></span>
-							<img src="images/image2.jpg" alt="">
-							<span class="spacer"></span>
-							<img src="images/image3.jpg" alt="">
-						</p>
-						<p>
-							<b>imgCheckbox</b> automatically attaches to a parent form (if one is present).<br />
-							The <code>submit</code> event is captured and values are injected. Hit submit to see the form serialized below.
-						</p>
-						<input type="submit" />
-					</form>
-					<p>
-						<code class="formoutput">Hit submit to see the form serialized.</code>
-					</p>
-					<p>
-						<b>imgCheckbox</b> will use the <code>name</code> attribute from your <code>img</code> if one is present.<br />
-						Otherwise (as above), the filename (without the extension) will be used.
-					</p>
-			</section>
+		<section id="basicusage" class="wrapper special">
+			<header class="major">
+				<h2>Basic Usage</h2>
+			</header>
+			<p>You can call <b>imgCheckbox</b> without any parameters on any jQuery collection containing <code>img</code> elements.</p>
+			<p><code>$("img").imgCheckbox();</code></p>
+			<form class="exampleone">
+				<p>
+					<img src="images/image1.jpg" alt="">
+					<span class="spacer"></span>
+					<img src="images/image2.jpg" alt="">
+					<span class="spacer"></span>
+					<img src="images/image3.jpg" alt="">
+				</p>
+				<p>
+					<b>imgCheckbox</b> automatically attaches to a parent form (if one is present).<br />
+					The <code>submit</code> event is captured and values are injected. Hit submit to see the form serialized below.
+				</p>
+				<input type="submit" />
+			</form>
+			<p>
+				<code class="formoutput1">Hit submit to see the form serialized.</code>
+			</p>
+			<p>
+				<b>imgCheckbox</b> will use the <code>name</code> attribute from your <code>img</code> if one is present.<br />
+				Otherwise (as above), the filename (without the extension) will be used.
+			</p>
+		</section>
 
-			<section id="options" class="wrapper style2">
-				<header class="major">
-					<h2>Options</h2>
-				</header>
-				<div class="inner alt">
-					<table class="alt">
-						<thead>
-							<th>Option</th><th>Type</th><th>Values</th><th>Default</th>
-						</thead>
-						<tbody>
-							<tr>
-								<td>checkMarkImage</td>
-								<td>URL</td>
-								<td>Supports anything your clients' browsers support in the <code>background-image</code> property (of a pseudo selector).</td>
-								<td>SVG Data URI which draws a white tick on semi transparent green.</td>
-							</tr>
-							<tr>
-								<td>graySelected</td>
-								<td>Boolean</td>
-								<td>Convenience option: Adds the necessary CSS rules to apply a grayscale filter on selected images.</td>
-								<td>true</td>
-							</tr>
-							<tr>
-								<td>scaleSelected</td>
-								<td>Boolean</td>
-								<td>Convenience option: Adds the necessary CSS rules to apply a downscaling filter on selected images.</td>
-								<td>true</td>
-							</tr>
-							<tr>
-								<td>fixedImageSize</td>
-								<td>String / Boolean</td>
-								<td>Sets a fixed image size to all images (useful if images vary in size). Values can be "200px" or "120px 200px" (not percentages).</td>
-								<td>false</td>
-							</tr>
-							<tr>
-								<td>checkMarkSize</td>
-								<td>String / Boolean</td>
-								<td>Sets a custom size for the image (Useful if your images are very large or very small and the default is not suitable). Values can be "30px" and "20px 30px" (note: percentages do not work).</td>
-								<td>30px</td>
-							</tr>
-							<tr>
-								<td>scaleCheckMark</td>
-								<td>Boolean</td>
-								<td>Convenience option: Adds the necessary CSS rules to apply a zooming effect on the checkmark as it appears and disappears.</td>
-								<td>true</td>
-							</tr>
-							<tr>
-								<td>fadeCheckMark</td>
-								<td>Boolean</td>
-								<td>Convenience option: Adds the necessary CSS rules to fade the checkmark in and out.</td>
-								<td>false</td>
-							</tr>
-							<tr>
-								<td>addToForm</td>
-								<td>jQuery / Boolean</td>
-								<td> imgCheckbox can inject the checked elements into the form. If <code>true</code>, imgCheckbox will find a parent form and attach to it. Alternatively, a jQuery object can be passed in shadow checkboxes will be appended to and controlled within it (the images needn't even be within the form).</td>
-								<td>true</td>
-							</tr>
-							<tr>
-								<td>styles</td>
-								<td>Object</td>
-								<td>For advanced customisation, the full stylesheet is applied using this object.</td>
-								<td>(see source)</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</section>
+		<section id="basicusage2" class="wrapper special">
+			<header class="major">
+				<h2>Radio</h2>
+			</header>
+			<p>You can also use <code>radio</code> option.</p>
+			<p><code>$("img").imgCheckbox({
+				radio: ".imgRadio"
+			});</code></p>
+			<form class="exampletwo">
+				<p>
+					<img src="images/image1.jpg" alt="" name="image" data-value="1">
+					<span class="spacer"></span>
+					<img src="images/image2.jpg" alt="" name="image" data-value="2">
+					<span class="spacer"></span>
+					<img src="images/image3.jpg" alt="" name="image" data-value="3">
+				</p>
+				<p>
+					The <code>submit</code> event is captured and values are injected. Hit submit to see the form serialized below.
+				</p>
+				<input type="submit" />
+			</form>
+			<p>
+				<code class="formoutput2">Hit submit to see the form serialized.</code>
+			</p>
+		</section>
 
-			<section id="advanced" class="wrapper special">
-				<header class="major">
-					<h2>Advanced Usage</h2>
-				</header>
-				<div class="inner">
-					<section>
-						<p>Advanced customisation can be achieved by applying styles through the <code>styles</code> option.<br />Want to add a fancy CSS3 blur filter to selected images? No Problem...</p>
-						<pre><code style="text-align: left">$("img").imgCheckbox({
-    "styles": {
-        "span.imgCheckbox.imgChked img": {
-            // It's important to note that overriding the "filter" property will remove grayscaling
-            "filter": "blur(5px)",
+		<section id="options" class="wrapper style2">
+			<header class="major">
+				<h2>Options</h2>
+			</header>
+			<div class="inner alt">
+				<table class="alt">
+					<thead>
+						<th>Option</th><th>Type</th><th>Values</th><th>Default</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>checkMarkImage</td>
+							<td>URL</td>
+							<td>Supports anything your clients' browsers support in the <code>background-image</code> property (of a pseudo selector).</td>
+							<td>SVG Data URI which draws a white tick on semi transparent green.</td>
+						</tr>
+						<tr>
+							<td>graySelected</td>
+							<td>Boolean</td>
+							<td>Convenience option: Adds the necessary CSS rules to apply a grayscale filter on selected images.</td>
+							<td>true</td>
+						</tr>
+						<tr>
+							<td>scaleSelected</td>
+							<td>Boolean</td>
+							<td>Convenience option: Adds the necessary CSS rules to apply a downscaling filter on selected images.</td>
+							<td>true</td>
+						</tr>
+						<tr>
+							<td>fixedImageSize</td>
+							<td>String / Boolean</td>
+							<td>Sets a fixed image size to all images (useful if images vary in size). Values can be "200px" or "120px 200px" (not percentages).</td>
+							<td>false</td>
+						</tr>
+						<tr>
+							<td>checkMarkSize</td>
+							<td>String / Boolean</td>
+							<td>Sets a custom size for the image (Useful if your images are very large or very small and the default is not suitable). Values can be "30px" and "20px 30px" (note: percentages do not work).</td>
+							<td>30px</td>
+						</tr>
+						<tr>
+							<td>scaleCheckMark</td>
+							<td>Boolean</td>
+							<td>Convenience option: Adds the necessary CSS rules to apply a zooming effect on the checkmark as it appears and disappears.</td>
+							<td>true</td>
+						</tr>
+						<tr>
+							<td>fadeCheckMark</td>
+							<td>Boolean</td>
+							<td>Convenience option: Adds the necessary CSS rules to fade the checkmark in and out.</td>
+							<td>false</td>
+						</tr>
+						<tr>
+							<td>addToForm</td>
+							<td>jQuery / Boolean</td>
+							<td> imgCheckbox can inject the checked elements into the form. If <code>true</code>, imgCheckbox will find a parent form and attach to it. Alternatively, a jQuery object can be passed in shadow checkboxes will be appended to and controlled within it (the images needn't even be within the form).</td>
+							<td>true</td>
+						</tr>
+						<tr>
+							<td>styles</td>
+							<td>Object</td>
+							<td>For advanced customisation, the full stylesheet is applied using this object.</td>
+							<td>(see source)</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
 
-            // This is just css: remember compatibility
-            "-webkit-filter": "blur(5px)",
+		<section id="advanced" class="wrapper special">
+			<header class="major">
+				<h2>Advanced Usage</h2>
+			</header>
+			<div class="inner">
+				<section>
+					<p>Advanced customisation can be achieved by applying styles through the <code>styles</code> option.<br />Want to add a fancy CSS3 blur filter to selected images? No Problem...</p>
+					<pre><code style="text-align: left">$("img").imgCheckbox({
+						"styles": {
+							"span.imgCheckbox.imgChked img": {
+								// It's important to note that overriding the "filter" property will remove grayscaling
+								"filter": "blur(5px)",
 
-            // Let's change the amount of scaling from the default of "0.8"
-            "transform": "scale(0.9)"
-        }
-    }
-});</code></pre>
-						<p class="exampletwo"><img src="images/Einstein.jpg" alt=""><span class="spacer"></span><img src="images/Wagner.jpg" alt=""><span class="spacer"></span><img src="images/Tolkien.jpg" alt=""><br />
+								// This is just css: remember compatibility
+								"-webkit-filter": "blur(5px)",
+
+								// Let's change the amount of scaling from the default of "0.8"
+								"transform": "scale(0.9)"
+							}
+						}
+					});</code></pre>
+					<p class="examplethree"><img src="images/Einstein.jpg" alt=""><span class="spacer"></span><img src="images/Wagner.jpg" alt=""><span class="spacer"></span><img src="images/Tolkien.jpg" alt=""><br />
 						<img src="images/Gandhi.jpg" alt=""><span class="spacer"></span><img src="images/Tesla.jpg" alt=""><span class="spacer"></span><img src="images/Lincoln.jpg" alt=""></p>
 					</section>
 				</div>
 			</section>
 
-		<!-- Footer -->
+			<!-- Footer -->
 			<footer id="footer">
 				<ul class="icons">
 					<li><a href="https://stackoverflow.com/users/123415/jcuenod" class="icon fa-stack-overflow"><span class="label">Stack Overflow</span></a></li>
@@ -160,72 +186,81 @@
 					<li><a href="https://github.com/jcuenod" class="icon fa-github"><span class="label">Github</span></a></li>
 				</ul>
 				<p class="copyright">Copyright &copy; 2015. <a href="http://www.rekindle.co.za">James Cuénod</a><br />
-				Credits: <a href="http://html5up.net">HTML5 UP</a></p>
-			</footer>
+					Credits: <a href="http://html5up.net">HTML5 UP</a></p>
+				</footer>
 
-		<!-- HeaderMenu -->
-			<navigation id="headermenu">
-				<span class="lhs">
-					<a href="https://github.com/jcuenod" class="icon fa-github"><span class="label">Github</span> Github</a>
-				</span>
-				<span class="rhs">
-					<a href="#basicusage" class=" scrolly">Basic Usage</a>
-					<!-- <a href="#multiple" class="scrolly">Mulitple Instances</a> -->
-					<a href="#options" class="scrolly">Options</a>
-					<a href="#advanced" class="scrolly">Advanced Usage</a>
-				</span>
-			</navigation>
+				<!-- HeaderMenu -->
+				<navigation id="headermenu">
+					<span class="lhs">
+						<a href="https://github.com/jcuenod" class="icon fa-github"><span class="label">Github</span> Github</a>
+					</span>
+					<span class="rhs">
+						<a href="#basicusage" class=" scrolly">Basic Usage</a>
+						<!-- <a href="#multiple" class="scrolly">Mulitple Instances</a> -->
+						<a href="#options" class="scrolly">Options</a>
+						<a href="#advanced" class="scrolly">Advanced Usage</a>
+					</span>
+				</navigation>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.imgcheckbox.js"></script>
-			<script type="text/javascript">
-			$(document).ready(function(){
-				$("header img").imgCheckbox({
-					"styles": {
-						"span.imgCheckbox img": {
-							"border-radius": "6px"
+				<!-- Scripts -->
+				<script src="assets/js/jquery.min.js"></script>
+				<script src="assets/js/jquery.scrolly.min.js"></script>
+				<script src="assets/js/jquery.imgcheckbox.js"></script>
+				<script type="text/javascript">
+				$(document).ready(function(){
+					$("header img").imgCheckbox({
+						"styles": {
+							"span.imgCheckbox img": {
+								"border-radius": "6px"
+							},
+							"span.imgCheckbox.imgChked img": {
+								"transform": "scale(0.95)",
+							},
+							"span.imgCheckbox": {
+								"border": "none",
+							}
 						},
-						"span.imgCheckbox.imgChked img": {
-							"transform": "scale(0.95)",
-						},
-						"span.imgCheckbox": {
-							"border": "none",
+						"checkMarkSize": "50px",
+						"checkMarkImage": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAtMzQ2LjM4NCkiPjxwYXRoIGQ9Ik0zMiAzNDYuMzg0YTMyIDMyIDAgMCAwLTMyIDMyIDMyIDMyIDAgMCAwIDMyIDMyIDMyIDMyIDAgMCAwIDMyLTMyIDMyIDMyIDAgMCAwLTMyLTMyem0yMS4yNTYgMTAuMzI3bC0yNC40NiA0MC44OTNMOS41IDM3NS4yMTNsMTcuNjkzIDkuNjA1IDI2LjA2LTI4LjEwN3oiIGZpbGw9IiNjODAwMDAiIGZpbGwtb3BhY2l0eT0iLjc4NCIvPjxwYXRoIGQ9Ik05LjUwMiAzNzUuMjEzbDE5LjI5NCAyMi4zOSAyNC40Ni00MC44OTMtMjYuMDYgMjguMTA3eiIgZmlsbD0iI2ZmZiIvPjwvZz48L3N2Zz4="
+					});
+					$(".exampleone img").imgCheckbox();
+					console.dir($(".exampletwo img"));
+					$(".exampletwo img").imgCheckbox({
+						radio: ".imgRadio"
+					});
+					$(".examplethree img").imgCheckbox({
+						"styles": {
+							"span.imgCheckbox.imgChked img": {
+								"filter": "blur(5px)",
+								"-webkit-filter": "blur(5px)",
+								"transform": "scale(0.9)"
+							}
 						}
-					},
-					"checkMarkSize": "50px",
-					"checkMarkImage": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAtMzQ2LjM4NCkiPjxwYXRoIGQ9Ik0zMiAzNDYuMzg0YTMyIDMyIDAgMCAwLTMyIDMyIDMyIDMyIDAgMCAwIDMyIDMyIDMyIDMyIDAgMCAwIDMyLTMyIDMyIDMyIDAgMCAwLTMyLTMyem0yMS4yNTYgMTAuMzI3bC0yNC40NiA0MC44OTNMOS41IDM3NS4yMTNsMTcuNjkzIDkuNjA1IDI2LjA2LTI4LjEwN3oiIGZpbGw9IiNjODAwMDAiIGZpbGwtb3BhY2l0eT0iLjc4NCIvPjxwYXRoIGQ9Ik05LjUwMiAzNzUuMjEzbDE5LjI5NCAyMi4zOSAyNC40Ni00MC44OTMtMjYuMDYgMjguMTA3eiIgZmlsbD0iI2ZmZiIvPjwvZz48L3N2Zz4="
-				});
-				$(".exampleone img").imgCheckbox();
-				$(".exampletwo img").imgCheckbox({
-				    "styles": {
-				        "span.imgCheckbox.imgChked img": {
-				            "filter": "blur(5px)",
-				            "-webkit-filter": "blur(5px)",
-				            "transform": "scale(0.9)"
-				        }
-				    }
-				});
-				$(".exampleone").submit(function() {
-					$("body").css({"opacity": 0}).animate({"opacity": 1}, "fast");
-					$(".formoutput").text($(this).serialize());
-					return false;
+					});
+					$(".exampleone").submit(function() {
+						$("body").css({"opacity": 0}).animate({"opacity": 1}, "fast");
+						$(".formoutput1").text($(this).serialize());
+						return false;
+					});
+					$(".exampletwo").submit(function() {
+						$("body").css({"opacity": 0}).animate({"opacity": 1}, "fast");
+						$(".formoutput2").text($(this).serialize());
+						return false;
+					})
+					$(window).scroll(function() {
+						if ($(this).scrollTop() > window.innerHeight -1){
+							$('#headermenu').addClass("scrollDown");
+						}
+						else{
+							$('#headermenu').removeClass("scrollDown");
+						}
+					});
 				})
-				$(window).scroll(function() {
-				if ($(this).scrollTop() > window.innerHeight -1){
-				    $('#headermenu').addClass("scrollDown");
-				  }
-				  else{
-				    $('#headermenu').removeClass("scrollDown");
-				  }
-				});
-			})
-			</script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+				</script>
+				<script src="assets/js/skel.min.js"></script>
+				<script src="assets/js/util.js"></script>
+				<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+				<script src="assets/js/main.js"></script>
 
-	</body>
-</html>
+			</body>
+			</html>
