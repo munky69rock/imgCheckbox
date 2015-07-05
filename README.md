@@ -30,6 +30,7 @@ fadeCheckMark | Boolean | Convenience option: Adds the necessary CSS rules to fa
 addToForm | Boolean / jQuery | imgCheckbox can inject the checked elements into the form. If `true`, imgCheckbox will find a parent form and hook into its submission. A jQuery object can be passed in and the `submit` listener will attach to it. | true
 styles | Object | For advanced customisation, the full stylesheet is applied using this object. | (see source)
 preselect | [Integer] | To preselect certain elements, use the syntax `{ preselect: [0,1,2]}` | []
+radio | Boolean / String | Opttion to change checkbox to radio button | false
 
 ## Advanced
 
